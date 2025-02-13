@@ -1,12 +1,13 @@
-import './App.css'
+import "./App.css";
+import { Input } from "./components/Input";
 
 function App() {
-
-  return (
-    <>
-
-    </>
-  )
+    return (
+        <>
+            <Input text="Siema" value="xd"
+             />
+        </>
+    );
 }
 
-export default App
+export default App;

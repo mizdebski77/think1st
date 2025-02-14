@@ -6,6 +6,8 @@
    --color-main:#CBB6E5;
    --color-focus: #761BE4;
    --color-active: #FAF9FA;
+   --color-buttonHover: #6A19CD;
+   --color-textColor: #fff;
 }
 
 html {

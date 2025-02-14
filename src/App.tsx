@@ -3,8 +3,7 @@ import { Input } from "./components/Input";
 function App() {
     return (
         <>
-            <Input text="Siema" value="xd"
-             />
+            <Input text="Siema" value="xd" />
         </>
     );
 }

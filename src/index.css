@@ -1,6 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+
+@theme {
+   --color-primary: #000853;
+   --color-main:#CBB6E5;
+   --color-focus: #761BE4;
+   --color-active: #FAF9FA;
+}
 
 html {
   box-sizing: border-box;
@@ -13,7 +19,7 @@ html {
 }
 
 body {
-  background: #f0eaf8;
+  background: #F0EAF8;
   padding: 0px;
   font-family: "Inter";
 }

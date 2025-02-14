@@ -4,10 +4,6 @@ module.exports = {
         "./src/**/*.{html,js,tsx,ts}",
         "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
     ],
-    theme: {
-        colors: {
-          textMain: '#000853'
-        },
-    },
+    theme: {},
     plugins: [],
 };

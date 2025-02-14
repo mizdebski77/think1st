@@ -8,12 +8,12 @@ interface InputProps {
 export const Input = ({ text, type, onChange, value }: InputProps) => {
     return (
         <fieldset className="grid gap-2">
-            <label className="text-textMain font-normal">{text}</label>
+            <label className="text-primary font-bold">{text}</label>
             <input
                 type={type}
                 value={value}
                 onChange={onChange}
-                className="p-2 rounded h-12"
+                className="p-2 rounded-lg h-12 w-full border border-main focus:outline-focus active:bg-active"
             />
         </fieldset>
     );

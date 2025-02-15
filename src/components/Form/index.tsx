@@ -1,4 +1,3 @@
-// Form.tsx
 import React, { useEffect, useState } from "react";
 import { RangeInput } from "../Slider";
 import { Button } from "../Button";

@@ -1,17 +1,36 @@
-import React from "react";
-
+// FileUploader.tsx
 interface FileInputProps {
     fileName: string;
-    onFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    onFileRemove: () => void;
+    setFileName: (value: string) => void;
+    setFile: (file: File | null) => void;
 }
 
-export const FileInput: React.FC<FileInputProps> = ({
+export const FileUploader: React.FC<FileInputProps> = ({
     fileName,
-    onFileChange,
-    onFileRemove,
+    setFileName,
+    setFile,
 }) => {
     const isSmallScreen = window.innerWidth <= 768;
+
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const selectedFile = e.currentTarget.files?.[0];
+        if (
+            selectedFile &&
+            ["image/jpeg", "image/png", "image/JPG", "image/PNG"].includes(
+                selectedFile.type
+            )
+        ) {
+            setFile(selectedFile);
+            setFileName(selectedFile.name);
+        } else {
+            alert("Please upload a JPG or PNG file.");
+        }
+    };
+
+    const handleFileRemove = () => {
+        setFile(null);
+        setFileName("");
+    };
 
     return (
         <fieldset className="grid gap-2">
@@ -43,7 +62,7 @@ export const FileInput: React.FC<FileInputProps> = ({
                         <button
                             type="button"
                             className="bg-primary ml-2 text-textColor flex justify-center items-center duration-300  rounded-full w-6 h-6 text-xs hover:bg-error "
-                            onClick={onFileRemove}
+                            onClick={handleFileRemove}
                         >
                             ✖
                         </button>
@@ -51,7 +70,7 @@ export const FileInput: React.FC<FileInputProps> = ({
                     <input
                         type="file"
                         id="formFileLg"
-                        onChange={onFileChange}
+                        onChange={handleFileChange}
                         className="hidden"
                         required
                     />

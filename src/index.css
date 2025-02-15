@@ -9,6 +9,10 @@
    --color-buttonHover: #6A19CD;
    --color-textColor: #fff;
    --color-textGrey: #898DA9;
+   --color-error:#ED4545;
+}
+fieldset {
+  padding:0;
 }
 
 html {

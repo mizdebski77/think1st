@@ -2,8 +2,8 @@
     "name": "think1st",
     "private": true,
     "version": "0.0.0",
-    "homepage": "https://mizdebski77.github.io/think1st/",
     "type": "module",
+    "homepage": "https://mizdebski77.github.io/think1st/",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",

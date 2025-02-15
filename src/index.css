@@ -10,6 +10,7 @@
    --color-textColor: #fff;
    --color-textGrey: #898DA9;
    --color-error:#ED4545;
+   --color-invalid: #FEECEC;
 }
 fieldset {
   padding:0;

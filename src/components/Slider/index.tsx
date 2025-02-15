@@ -8,7 +8,7 @@ interface RangeInputProps {
 
 export const RangeInput: React.FC<RangeInputProps> = ({ value, onChange }) => {
     const isSmallScreen = window.innerWidth <= 500;
-    
+
     const textContainerStyle = {
         left: `calc(${(value / 100) * 100}% - ${
             isSmallScreen ? "36px" : "44px"
@@ -17,7 +17,7 @@ export const RangeInput: React.FC<RangeInputProps> = ({ value, onChange }) => {
 
     return (
         <fieldset>
-            <label htmlFor="range" className="mb-1 inline-block text-[#000853]">
+            <label htmlFor="range" className="mb-1 inline-block text-primary">
                 Age
             </label>
             <label className="flex justify-between text-xs px-1">
@@ -32,7 +32,7 @@ export const RangeInput: React.FC<RangeInputProps> = ({ value, onChange }) => {
                     id="range"
                     value={value}
                     onChange={onChange}
-                    className="bg-[#CBB6E5] w-full focus:outline-none h-1.5 focus:ring-purple-600 accent-[#761BE4] cursor-pointer appearance rounded-lg"
+                    className="bg-main w-full focus:outline-none h-1.5 focus:ring-focus accent-focus cursor-pointer appearance rounded-lg"
                 />
                 <div
                     style={textContainerStyle}
@@ -40,7 +40,7 @@ export const RangeInput: React.FC<RangeInputProps> = ({ value, onChange }) => {
                 >
                     <img src={rangeInputImg} alt="range input" />
                     <span
-                        className={`absolute text-xs text-[#761BE4] top-2.5 ${
+                        className={`absolute text-xs text-focus top-2.5 ${
                             value < 10
                                 ? "left-[14px]"
                                 : value <= 99

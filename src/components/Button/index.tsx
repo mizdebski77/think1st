@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
             className={`mt-6 py-2.5 px-8 text-[18px] rounded-md duration-300 text-textColor 
                   ${
                       disabled
-                          ? "bg-[#CBB6E5] cursor-no-drop "
+                          ? "bg-main cursor-no-drop "
                           : "bg-focus hover:bg-buttonHover cursor-pointer "
                   }
                   `}

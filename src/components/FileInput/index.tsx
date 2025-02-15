@@ -34,18 +34,18 @@ export const FileUploader: React.FC<FileInputProps> = ({
 
     return (
         <fieldset className="grid gap-2">
-            <label className="text-[#000853]">Photo</label>
+            <label className="text-primary">Photo</label>
             <div>
                 <label
                     htmlFor="formFileLg"
-                    className="cursor-pointer bg-white w-full h-24 flex justify-center items-center border rounded-lg border-[#cbb6e5]"
+                    className="cursor-pointer bg-white w-full h-24 flex justify-center items-center border rounded-lg border-main"
                 >
-                    <p className="text-base text-[#898DA9]">
+                    <p className="text-base text-textGrey">
                         <span
                             className={`${
                                 fileName
-                                    ? "text-[#000853] font-medium mr-2"
-                                    : "text-[#761BE4] underline underline-offset-4"
+                                    ? "text-primary font-medium mr-2"
+                                    : "text-focus underline underline-offset-4"
                             }`}
                         >
                             {fileName

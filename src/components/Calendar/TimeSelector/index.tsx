@@ -20,8 +20,8 @@ export const TimeSelector: React.FC<TimeSelectorProps> = ({
                         key={hour}
                         className={`w-[76px] h-[46px] flex items-center justify-center bg-white rounded-lg border cursor-pointer ${
                             selectedHour === hour
-                                ? "border-2 border-[#761BE4]"
-                                : "border-[#cbb6e5]"
+                                ? "border-2 border-focus"
+                                : "border-main"
                         }`}
                         onClick={() => onHourSelect(hour)}
                     >

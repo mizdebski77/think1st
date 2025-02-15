@@ -14,9 +14,6 @@ export const WorkoutSchedule: React.FC<WorkoutScheduleProps> = ({
 }) => {
     return (
         <div>
-            <h2 className="text-[24px] font-medium text-primary">
-                Your Workout
-            </h2>
             <Calendar
                 onDaySelect={onDaySelect}
                 onHourSelect={onHourSelect}

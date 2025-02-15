@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 
 @theme {
    --color-primary: #000853;
@@ -12,23 +14,10 @@
    --color-error:#ED4545;
    --color-invalid: #FEECEC;
 }
-fieldset {
-  padding:0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-::after,
-::before {
-  box-sizing: inherit;
-}
 
 body {
   background: #F0EAF8;
-  padding: 0px;
+  padding: 120px;
   font-family: "Inter", serif;
 }
 

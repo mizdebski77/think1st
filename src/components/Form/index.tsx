@@ -73,7 +73,7 @@ export const Form: React.FC = () => {
 
     return (
         <div className="max-w-[426px] m-auto">
-            <h1 className=" text-2xl mb-6 text-primary font-medium">
+            <h1 className=" text-2xl mb-8 text-primary font-medium">
                 Personal Info
             </h1>
             <form
@@ -105,7 +105,7 @@ export const Form: React.FC = () => {
                     setFileName={setFileName}
                     setFile={setFile}
                 />
-                <h2 className="text-[24px] font-medium text-primary">
+                <h2 className="text-2xl font-medium mt-[24px] text-primary">
                     Your Workout
                 </h2>
                 <Calendar

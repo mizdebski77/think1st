@@ -21,9 +21,6 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
 }) => {
     return (
         <div>
-            <h1 className="text-2xl mb-6 text-primary font-medium">
-                Personal Info
-            </h1>
             <Input
                 text="First Name"
                 value={name}

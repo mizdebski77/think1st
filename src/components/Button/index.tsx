@@ -1,17 +1,32 @@
+import React from "react";
+
 interface ButtonProps {
-    text: string;
-    isFormValid: boolean;
+    disabled: boolean;
+    children: React.ReactNode;
+    onClick?: () => void;
+    type?: "button" | "submit" | "reset";
 }
-export const Button = ({ text, isFormValid }: ButtonProps) => {
+
+export const Button: React.FC<ButtonProps> = ({
+    disabled,
+    children,
+    onClick,
+    type = "button",
+}) => {
     return (
         <button
-            type="submit"
-            disabled={!isFormValid}
-            className={`hover:bg-buttonHover duration-300 rounded-md bg-focus py-2.5 px-8 text-[18px] text-textColor group-invalid:bg-main mt-6 ${
-                isFormValid ? "bg-main hover:bg-main cursor-no-drop" : ""
-            }`}
+            type={type}
+            onClick={onClick}
+            disabled={disabled}
+            className={`mt-6 py-2.5 px-8 text-[18px] rounded-md duration-300 text-textColor 
+                  ${
+                      disabled
+                          ? "bg-[#CBB6E5] cursor-no-drop "
+                          : "bg-focus hover:bg-buttonHover cursor-pointer "
+                  }
+                  `}
         >
-            {text}
+            {children}
         </button>
     );
 };

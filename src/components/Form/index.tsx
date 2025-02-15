@@ -27,9 +27,10 @@ export const Form: React.FC = () => {
                 lastName.trim() !== "" &&
                 email.trim() !== "" &&
                 selectedDayOfWeek !== null &&
-                selectedHourOfDay !== null
+                selectedHourOfDay !== null &&
+                file !== null 
         );
-    }, [name, lastName, email, selectedDayOfWeek, selectedHourOfDay]);
+    }, [name, lastName, email, selectedDayOfWeek, selectedHourOfDay, file]);
 
     const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSliderValue(parseInt(e.currentTarget.value, 10));
@@ -51,9 +52,14 @@ export const Form: React.FC = () => {
         formData.append("Last Name", lastName);
         formData.append("E-Mail", email);
         formData.append("Age", sliderValue.toString());
+
         if (file) {
             formData.append("File", file);
+        } else {
+            alert("Please select a file before submitting.");
+            return;
         }
+
         formData.append("Day", selectedDayOfWeek || "");
         formData.append("Hour", selectedHourOfDay || "");
 
@@ -105,6 +111,7 @@ export const Form: React.FC = () => {
                     setFileName={setFileName}
                     setFile={setFile}
                 />
+
                 <h2 className="text-2xl font-medium mt-[24px] text-primary">
                     Your Workout
                 </h2>

@@ -19,7 +19,7 @@ interface DayGridProps {
     selectedDay: number | null;
     onDaySelect: (day: number) => void;
     holidays: HolidayProps[] | undefined;
-    onChangeMonth: (step: number) => void; // Dodajemy funkcję zmiany miesiąca
+    onChangeMonth: (step: number) => void; 
 }
 
 export const DayGrid: React.FC<DayGridProps> = ({

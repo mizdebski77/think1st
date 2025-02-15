@@ -1,27 +1,25 @@
-import { useState } from "react";
-import rangeInput from "../../assets/rangeInput.svg";
+import React from "react";
+import rangeInputImg from "../../assets/rangeInput.svg";
 
-export const Slider = () => {
-    const [sliderValue, setSliderValue] = useState(8);
+interface RangeInputProps {
+    value: number;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-    const updateTextPosition = (event: React.FormEvent<HTMLInputElement>) => {
-        const value = parseInt(event.currentTarget.value, 10);
-        setSliderValue(value);
-    };
+export const RangeInput: React.FC<RangeInputProps> = ({ value, onChange }) => {
+    const isSmallScreen = window.innerWidth <= 500;
+    
     const textContainerStyle = {
-        left: `calc(${(sliderValue / 100) * 100}% - ${
-            window.innerWidth <= 500 ? "36px" : "44px"
-        } + ${(sliderValue / 100) * (window.innerWidth <= 500 ? 10 : 18)}px)`,
+        left: `calc(${(value / 100) * 100}% - ${
+            isSmallScreen ? "36px" : "44px"
+        } + ${(value / 100) * (isSmallScreen ? 10 : 18)}px)`,
     };
+
     return (
         <fieldset>
-            <label
-                htmlFor="customRange1"
-                className="mb-1 inline-block text-primary dark:text-neutral-200"
-            >
+            <label htmlFor="range" className="mb-1 inline-block text-[#000853]">
                 Age
             </label>
-
             <label className="flex justify-between text-xs px-1">
                 <span>8</span>
                 <span>100</span>
@@ -32,30 +30,25 @@ export const Slider = () => {
                     min={8}
                     max={100}
                     id="range"
-                    className="bg-main w-full focus:outline-none h-1.5 focus:ring-purple-600 accent-focus cursor-pointer appearance rounded-lg "
-                    value={sliderValue}
-                    onChange={updateTextPosition}
+                    value={value}
+                    onChange={onChange}
+                    className="bg-[#CBB6E5] w-full focus:outline-none h-1.5 focus:ring-purple-600 accent-[#761BE4] cursor-pointer appearance rounded-lg"
                 />
                 <div
                     style={textContainerStyle}
-                    className="relative flex items-center max-w-12 "
+                    className="relative flex items-center"
                 >
-                    <img
-                        className="relative flex justify-center"
-                        alt="range input"
-                        src={rangeInput}
-                    />
+                    <img src={rangeInputImg} alt="range input" />
                     <span
-                        className={`absolute text-xs text-focus 
-                ${
-                    sliderValue < 10
-                        ? "left-[14px]"
-                        : sliderValue <= 99
-                        ? "left-[10px]"
-                        : "left-[8px]"
-                } top-2.5`}
+                        className={`absolute text-xs text-[#761BE4] top-2.5 ${
+                            value < 10
+                                ? "left-[14px]"
+                                : value <= 99
+                                ? "left-[10px]"
+                                : "left-[8px]"
+                        }`}
                     >
-                        {sliderValue}
+                        {value}
                     </span>
                 </div>
             </div>

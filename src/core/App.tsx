@@ -2,7 +2,7 @@ import { Form } from "../components/Form";
 
 function App() {
     return (
-        <main className=" overflow-x-hidden">
+        <main className=" md:p-[120px] p-[12px] overflow-x-hidden">
             <Form />
         </main>
     );

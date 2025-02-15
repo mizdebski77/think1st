@@ -1,6 +1,5 @@
 # Training App
 
-This project is a web application designed to facilitate sign-ups for training sessions. Users can provide necessary information such as their name, surname, email address, and photo, and select a training day and time. The application also fetches holiday data from the Ninja API to exclude Sundays and public holidays as training days, marking them as unavailable for selection and providing information about the holidays next to their names.
 
 ## Table of Contents
 1. [Demo](#demo)
@@ -12,7 +11,7 @@ This project is a web application designed to facilitate sign-ups for training s
 Check out the live demo of the application [here](https://mizdebski77.github.io/think1st/).
 
 ## Description
-The training application was developed exclusively for Think1st, with this being a demo version as the full version was tailored specifically for the company`s needs. Throughout the project, I collaborated closely with a seasoned Figma designer and an expert backend developer. This project is a web application designed to facilitate sign-ups for training sessions. Users can provide necessary information such as their name, surname, email address, and photo, and select a training day and time. The application also fetches holiday data from the Ninja API to exclude Sundays and public holidays as training days, marking them as unavailable for selection and providing information about the holidays next to their names.
+This project is a web application designed to facilitate sign-ups for training sessions. Users can provide necessary information such as their name, surname, email address, and photo, and select a training day and time. The application also fetches holiday data from the Ninja API to exclude Sundays and public holidays as training days, marking them as unavailable for selection and providing information about the holidays next to their names.
 
 ## Technologies Used
 - React

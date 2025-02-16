@@ -28,7 +28,7 @@ export const Form: React.FC = () => {
                 email.trim() !== "" &&
                 selectedDayOfWeek !== null &&
                 selectedHourOfDay !== null &&
-                file !== null 
+                file !== null
         );
     }, [name, lastName, email, selectedDayOfWeek, selectedHourOfDay, file]);
 

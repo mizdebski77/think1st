@@ -21,8 +21,8 @@ export const Input = ({ text, type, onChange, value, pattern }: InputProps) => {
                            invalid:[&:not(:placeholder-shown):not(:focus)]:border-2 
                            invalid:[&:not(:placeholder-shown):not(:focus)]:bg-invalid"
                 pattern={pattern}
-                required={type === "email"} // Dodaj required dla pola email
-                placeholder=" " // Dodaj pusty placeholder
+                required={type === "email"} 
+                placeholder=" " 
             />
             {type === "email" && (
                 <span className="text-primary hidden text-sm peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">

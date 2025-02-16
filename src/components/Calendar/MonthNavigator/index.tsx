@@ -1,4 +1,3 @@
-// MonthNavigator.tsx
 import React from "react";
 import next from "../../../assets/next.svg";
 import prev from "../../../assets/prev.svg";

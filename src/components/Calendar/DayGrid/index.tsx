@@ -1,4 +1,3 @@
-// DayGrid.tsx
 import React from "react";
 import { MonthNavigator } from "../MonthNavigator";
 import { WeekDays } from "../../../constants/Days";
@@ -28,7 +27,7 @@ export const DayGrid: React.FC<DayGridProps> = ({
     selectedDay,
     onDaySelect,
     holidays,
-    onChangeMonth, // Odbieramy funkcję
+    onChangeMonth, 
 }) => {
     const daysInMonth = (year: number, month: number) =>
         new Date(year, month, 0).getDate();
@@ -39,7 +38,6 @@ export const DayGrid: React.FC<DayGridProps> = ({
     const generateDays = () => {
         const days = [];
 
-        // Puste komórki przed pierwszym dniem miesiąca
         for (let i = 1; i < firstDayOfWeek; i++) {
             days.push(
                 <div
@@ -49,7 +47,6 @@ export const DayGrid: React.FC<DayGridProps> = ({
             );
         }
 
-        // Generowanie dni miesiąca
         for (let day = 1; day <= totalDays; day++) {
             const isSelected = selectedDay === day;
             const dayOfWeek = new Date(

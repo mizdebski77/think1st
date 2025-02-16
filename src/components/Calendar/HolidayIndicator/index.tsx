@@ -1,4 +1,3 @@
-// HolidayIndicator.tsx
 import React from "react";
 import holidayName from "../../../assets/holidayName.svg";
 

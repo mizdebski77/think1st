@@ -1,4 +1,3 @@
-// FileUploader.tsx
 interface FileInputProps {
     fileName: string;
     setFileName: (value: string) => void;

@@ -1,4 +1,3 @@
-// Calendar.tsx
 import React, { useState } from "react";
 import { DayGrid } from "./DayGrid";
 import { HolidayIndicator } from "./HolidayIndicator";

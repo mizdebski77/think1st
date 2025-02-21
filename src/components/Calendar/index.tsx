@@ -15,7 +15,7 @@ export const Calendar: React.FC<CalendarProps> = ({
     onHourSelect,
     resetTimeValues,
 }) => {
-    const [currentYear, setYear] = useState(2024);
+    const [currentYear, setYear] = useState(2025);
     const [currentMonth, setMonth] = useState(1);
     const [selectedDay, setSelectedDay] = useState<number | null>(null);
     const [selectedHour, setSelectedHour] = useState("");

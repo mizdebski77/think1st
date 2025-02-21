@@ -29,10 +29,14 @@ export const RangeInput: React.FC<RangeInputProps> = ({ value, onChange }) => {
                     type="range"
                     min={8}
                     max={100}
-                    id="range"
                     value={value}
                     onChange={onChange}
-                    className="bg-main w-full focus:outline-none h-1.5 focus:ring-focus accent-focus cursor-pointer appearance rounded-lg"
+                    className="w-full h-1.5 rounded-lg appearance-none bg-gray-focus cursor-pointer accent-focus"
+                    style={{
+                        background: `linear-gradient(to right, #761BE4 ${
+                            ((value - 8) / (100 - 8)) * 100
+                        }%, #CBB6E5 ${((value - 8) / (100 - 8)) * 100}%)`,
+                    }}
                 />
                 <div
                     style={textContainerStyle}
